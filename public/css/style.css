@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 20px;
+}
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 70vh;
+    border: 1px solid #ccc;
+}
+table {
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+thead {
+    background-color: #f2f2f2;
+}
+.button-container {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 23px;
+}
+.fixed-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ion-icon {
+    font-size: 24px;
+}
+
+.custom-input-group {
+    border-radius: 4px;
+
+}
+
+#searchInput {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}

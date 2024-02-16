@@ -1,0 +1,9 @@
+#cadastro {
+    margin: 20px auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Adiciona espaço interno ao formulário */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor do formulário */
+    border-radius: 5px; /* Adiciona borda arredondada */
+}
+.btn{
+    margin-top: 10px;
+}
