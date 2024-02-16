@@ -21,10 +21,17 @@
                             <td>{{ $cadastros->ingles }}</td>
                             <td>{{ $cadastros->portugues }}</td>
                             <td>
-                                <ion-icon name="trash-bin-outline"></ion-icon>
+                                <form class="deleteForm" action="/cadastro/{{ $cadastros->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-btn">
+                                        <ion-icon name="trash-bin-outline"></ion-icon>
+                                    </button>
                                 &nbsp;
-                                <ion-icon name="pencil-outline"></ion-icon>
+                                <a href="/cadastro/edit/{{ $cadastros->id }}" class="btn btn-info edit-btn">
+                                    <ion-icon name="pencil-outline"></ion-icon></a>
                             </td>
+                        </form>
                         </tr>
                     @endforeach
                 </tbody>
@@ -46,6 +53,18 @@
                 Swal.fire({
                     title: 'Error!',
                     text: '{{ session('msg') }}',
+                });
+            @endif
+            @if (session('msg1'))
+                Swal.fire({
+                    title: '{{ session('msg1') }}',
+                    icon: "success"
+                });
+            @endif
+            @if (session('msg2'))
+                Swal.fire({
+                    title: '{{ session('msg2') }}',
+                    icon: "success"
                 });
             @endif
             var searchInput = document.getElementById("searchInput");

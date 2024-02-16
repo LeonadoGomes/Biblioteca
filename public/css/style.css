@@ -1,8 +1,9 @@
+
 .container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin-top: 20px;
+    /* margin-top: 10px; */
 }
 .table-container {
     flex: 1;
@@ -17,7 +18,14 @@ th, td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: left;
+    max-width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: system-ui;
+    font-size: 24px;
 }
+
 thead {
     background-color: #f2f2f2;
 }
@@ -33,7 +41,18 @@ thead {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 ion-icon {
     font-size: 24px;
 }

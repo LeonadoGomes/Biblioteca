@@ -8,4 +8,6 @@ Route::get('/', [BibliotecaController::class, 'index']);
 
 Route::get('/cadastro', [CadastroController::class, 'index']);
 Route::post('/salvar', [CadastroController::class, 'cadastrar']);
-// Route::get('/cadastro/{id}', [CadastroController::class, 'show']);
+Route::get('/cadastro/edit/{id}', [CadastroController::class, 'edit']);
+Route::put('/cadastro/update/{id}', [CadastroController::class, 'update']);
+Route::delete('/cadastro/{id}', [CadastroController::class, 'destroy']);
